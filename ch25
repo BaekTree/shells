@@ -1,0 +1,17 @@
+#!/bin/bash
+
+TITLE="System info report for $HOSTNAME"
+CURRENT_TIME="$(date +"%x %r %z")"
+TIMESTAMP="genereated $CURRENT_TIME, BY $USER"
+
+cat <<_EOF_
+<html>
+	<head>
+		<title>$TITLE</title>
+	</head>
+	<body>
+		<h1>$TITLE</h1>
+		<p>$TIMESTAMP</p>
+	</body>
+</html>
+_EOF_
