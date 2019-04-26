@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ANSWER=maybe
+
+if [ -z "$ANSWER" ]; then
+	echo no answer >&2
+	exit 1
+fi
+
+if [ "$ANSWER" = "yes" ]; then
+	echo answer is yes
+elif [ "$ANSWER" = "no" ]; then
+	echo answer is no
+elif [ "$ANSWER" = "maybe" ]; then
+	echo answer is maybe
+else
+	echo answer is unknown
+fi
+

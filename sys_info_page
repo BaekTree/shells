@@ -1,0 +1,36 @@
+#!/bin/bash
+
+TITLE="sys info report for $HOSTNAME"
+CURRENT_TIME="$(date + "%x %r %z")"
+TIMESTAMP="generated $CURRENT_TIME, BY $USER"
+
+report_uptime(){
+	echo Function report uptime executed
+	return
+}
+
+report_disk_space(){
+	echo Function report disk space executed
+	return
+}
+
+report_home_space(){
+	echo Function report home space executed
+	return
+}
+
+cat <<_EOF_
+<html>
+	<head>
+		<title>$TITLE</title>
+		<body>
+			<h1>$TITLE</h1>
+			<p>$TIMESTAMP</p>
+			$(report_uptime)
+			$(report_disk_space)
+			$(report_home_space)
+		</body>	
+
+	</head>
+</html>
+_EOF_
